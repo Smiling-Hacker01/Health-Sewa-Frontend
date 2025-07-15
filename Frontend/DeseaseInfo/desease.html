@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information- Health Sewa</title>
+    <link rel="stylesheet" href="desease.css">
+</head>
+<body>
+
+    <h1 class="heading">Disease Information</h1>
+    <input type="text" id="search-box" placeholder="Search for a disease..." oninput="searchDisease()">
+
+    <div id="disease-list" class="disease-container">
+        <div class="disease" id="fever">
+            <h2>Fever</h2>
+            <p><strong>Causes:</strong> Infections, heat exhaustion.</p>
+            <p><strong>Symptoms:</strong> High temperature, chills, sweating.</p>
+            <p><strong>Treatment:</strong> Rest, hydration, fever-reducing medication.</p>
+        </div>
+
+        <div class="disease" id="cold">
+            <h2>Common Cold</h2>
+            <p><strong>Causes:</strong> Rhinovirus infection.</p>
+            <p><strong>Symptoms:</strong> Sneezing, runny nose, sore throat.</p>
+            <p><strong>Treatment:</strong> Rest, fluids, vitamin C, steam inhalation.</p>
+        </div>
+
+        <div class="disease" id="flu">
+            <h2>Flu (Influenza)</h2>
+            <p><strong>Causes:</strong> Influenza virus.</p>
+            <p><strong>Symptoms:</strong> Fever, chills, fatigue, cough.</p>
+            <p><strong>Treatment:</strong> Antiviral meds, rest, hydration.</p>
+        </div>
+
+        <div class="disease" id="covid">
+            <h2>COVID-19</h2>
+            <p><strong>Causes:</strong> SARS-CoV-2 virus.</p>
+            <p><strong>Symptoms:</strong> Cough, fever, difficulty breathing.</p>
+            <p><strong>Treatment:</strong> Rest, fluids, medical supervision if severe.</p>
+        </div>
+
+        <div class="disease" id="diabetes">
+            <h2>Diabetes</h2>
+            <p><strong>Causes:</strong> Insulin resistance, genetics.</p>
+            <p><strong>Symptoms:</strong> Increased thirst, frequent urination, fatigue.</p>
+            <p><strong>Treatment:</strong> Diet control, insulin therapy, exercise.</p>
+        </div>
+
+        <div class="disease" id="hypertension">
+            <h2>Hypertension</h2>
+            <p><strong>Causes:</strong> Stress, obesity, high salt intake.</p>
+            <p><strong>Symptoms:</strong> Dizziness, headaches, blurred vision.</p>
+            <p><strong>Treatment:</strong> Lifestyle changes, medication.</p>
+        </div>
+
+        <div class="disease" id="asthma">
+            <h2>Asthma</h2>
+            <p><strong>Causes:</strong> Allergens, smoke, genetic factors.</p>
+            <p><strong>Symptoms:</strong> Wheezing, shortness of breath, coughing.</p>
+            <p><strong>Treatment:</strong> Inhalers, avoiding triggers.</p>
+        </div>
+
+        <div class="disease" id="migraine">
+            <h2>Migraine</h2>
+            <p><strong>Causes:</strong> Stress, bright lights, dehydration.</p>
+            <p><strong>Symptoms:</strong> Severe headache, nausea, sensitivity to light.</p>
+            <p><strong>Treatment:</strong> Painkillers, resting in a dark room.</p>
+        </div>
+
+        <div class="disease" id="pneumonia">
+            <h2>Pneumonia</h2>
+            <p><strong>Causes:</strong> Bacteria, viruses, fungi.</p>
+            <p><strong>Symptoms:</strong> Cough with phlegm, fever, chest pain.</p>
+            <p><strong>Treatment:</strong> Antibiotics, hydration, oxygen therapy.</p>
+        </div>
+
+        <div class="disease" id="typhoid">
+            <h2>Typhoid</h2>
+            <p><strong>Causes:</strong> Salmonella bacteria (contaminated food/water).</p>
+            <p><strong>Symptoms:</strong> Fever, weakness, loss of appetite.</p>
+            <p><strong>Treatment:</strong> Antibiotics, hydration.</p>
+        </div>
+
+        <div class="disease" id="dengue">
+            <h2>Dengue Fever</h2>
+            <p><strong>Causes:</strong> Mosquito-borne virus.</p>
+            <p><strong>Symptoms:</strong> High fever, joint pain, rash.</p>
+            <p><strong>Treatment:</strong> Hydration, pain relievers.</p>
+        </div>
+
+        <div class="disease" id="malaria">
+            <h2>Malaria</h2>
+            <p><strong>Causes:</strong> Mosquito-borne parasite.</p>
+            <p><strong>Symptoms:</strong> Fever, chills, nausea.</p>
+            <p><strong>Treatment:</strong> Antimalarial drugs.</p>
+        </div>
+
+        <div class="disease" id="headache">
+            <h2>Headache</h2>
+            <p><strong>Causes:</strong> Stress, dehydration, lack of sleep.</p>
+            <p><strong>Symptoms:</strong> Pain in the head/forehead, pressure.</p>
+            <p><strong>Treatment:</strong> Hydration, rest, painkillers.</p>
+        </div>
+        
+        <div class="common-desease disease" id="forAllDesease">
+            <h2 class="user-input"></h2>
+            <p><strong>Causes:</strong> Stress, dehydration, lack of sleep.</p>
+            <p><strong>Symptoms:</strong> Pain in the body, pressure, joint pain, headache.</p>
+            <p><strong>Treatment:</strong> Hydration, rest, painkillers.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Health Sewa. All rights reserved.
+    </footer>
+    
+    <!-- Optional no result message -->
+    <p id="no-result">No disease found. Please try another name.</p>
+    
+<script src="./desease.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sewa - Your Health Companion</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="first-head">
+            <h1 class="logo">Health Sewa</h1>
+            <div class="hamburger" id="ham-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+            <nav id="navbar">
+                <ul class="nav-items" id="nav-links">
+                    <li><a href="./../BloodBank/bloodBank.html" class="nav-hover">Hospitals & Blood Banks</a></li>
+                    <li><a href="./../BMI_Page/BMI.html" class="nav-hover">BMI Calculator</a></li>
+                    <li><a href="./../DonorRegistration/donor.html" class="nav-hover">Donate Blood</a></li>
+                    <li><a href="./../ServiceGetter/service.html" class="nav-hover">Request Blood</a></li>
+                    <li><a href="./../DeseaseInfo/desease.html" class="nav-hover">Disease Info</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="site-info">
+        <p>To Ensure Full Functionality, We Recommend Using This Site In Desktop Mode.</p>
+    </div>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active" id="slide1">
+                <h2>🩸 Donate Blood, Save Lives!</h2>
+                <p>Find nearby blood banks & become a donor.</p>
+            </div>
+            <div class="slide" id="slide2">
+                <h2>🥗 Eat Healthy, Stay Fit!</h2>
+                <p>Personalized diet plans for your health goals.</p>
+            </div>
+            <div class="slide" id="slide3">
+                <h2>🏋️‍♂️ Get Fit, Stay Strong!</h2>
+                <p>Home & gym workouts tailored for you.</p>
+            </div>
+            <div class="slide" id="slide4">
+                <h2>🏥 Know Your Health!</h2>
+                <p>Get information on diseases & home remedies.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+    <div class="info-container">
+
+        <div class="box box1 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/womwn\ in\ bed.avif);"></div>
+                <h2>One Hour Of Screen Time Reduces Sleep By 24 Hours.</h2>
+                <p>Study Shows a Fascinating Results Of Screen Time On Human Sleep.</p>
+                <a href="./../sleepPage/sleep.html">See More</a>
+            </div>
+        </div>
+
+        <div class="box box2 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/cold\ shower.jpg);"></div>
+                <h2>Cold Shower Benefits For Your Health.</h2>
+                <p>Studies Reveal Fascinating Effects on Human Health.</p>
+                <a href="./../Cold Shower/cold.html">See More</a>
+            </div>
+        </div>
+
+        <div class="box box2 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/high\ blood\ pressure\ symp.jpg);"></div>
+                <h2>What Are The Symptoms and Causes of High Blood Pressure?</h2>
+                <p>The Reasons Behind the Rising High Blood Pressure Issues Among People.</p>
+                <a href="./../Blood pressure Page/bloodPressure.html">See More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="info-container">
+
+        <div class="box box1 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/bmi2.jpg);"></div>
+                <h2>What Is BMI?.</h2>
+                <p>Calculate Yours and Get a Complete Guide to Understanding Your Weight and Health!</p>
+                <a href="./../BMI_Page/BMI.html">See More</a>
+            </div>
+        </div>
+
+        <div class="box box2 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/barefoot2.jpg);"></div>
+                <h2>Benefits of Walking Barefoot in Grass Daily for 10 Minutes</h2>
+                <p>Walking Barefoot on Grass Reduces Stress, Boosts Mood, and Connects You with Nature.</p>
+                <a href="./../Walking Barefoot/barefoot.html">See More</a>
+            </div>
+        </div>
+
+        <div class="box box2 ">
+            <div class="box-content">
+                <div class="box-img" style="background-image: url(./../healthsewa%20images/exercise\ 2.jpg);"></div>
+                <h2>Get Your Daily Exercise Here</h2>
+                <p> Gym or home – we've got your daily fitness covered. Stay active, stay strong!</p>
+                <a href="./../Exercise_page/Exercise.html">See More</a>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+
+        <div class="footer-pannel-one"><a href="./home.html">Back To Top</a></div>
+
+        <div class="footer-panel-two">
+            <div class="footer-panel-two-child-1">
+                <h1>Health Sewa</h1>
+            </div>
+            <div class="footer-panel-two-child-2">
+                <div class="socio-1"><a href="https://www.facebook.com/saurabh.saurabthakur/about"><i class="fa-brands fa-facebook child-logo"></i></a></div>
+                <div class="socio-2"><a href="https://www.instagram.com/eccedentesiast_vsk/"><i class="fa-brands fa-instagram child-logo"></i></a></div>
+                <div class="socio-3"><a href="https://www.threads.net/@eccedentesiast_vsk"><i class="fa-brands fa-threads child-logo"></i></a></div>
+                <div class="socio-4"><a href="https://www.linkedin.com/in/vishal-singh-kushwaha-08942a317/"><i class="fa-brands fa-linkedin child-logo"></i></a></div>
+            </div>
+
+            <div class="footer-panel-two-child-3">
+                <div class="site-logo"><img src="./../healthsewa images/health.png" alt="img"></div>
+            </div>
+        </div>
+
+        <div class="footer-panel-three">
+
+            <div class="footer-panel-three-child-1">
+                <h2>Why Health Sewa?</h2>
+                <p>At Health Sewa, we blend trusted health insights with personalized care to guide you toward a healthier, happier life. Whether you're tracking your BMI, planning your diet, or learning wellness tips — we're here to support your journey with simplicity and accuracy.</p>
+            </div>
+            
+            <div class="footer-panel-three-child-2">
+                <p><a href="./../About Us/aboutUs.html" class="panel-3-child-2-ref">About Us</a></p>
+                <p><a href="./../Contact us/contact.html" class="panel-3-child-2-ref">Contact Us</a></p>
+                <p><a href="./../privacy Page/privacy.html" class="panel-3-child-2-ref">Privacy Policy</a></p>
+                <p><a href="./../privacy Page/privacy.html" class="panel-3-child-2-ref">Privacy Settings</a></p>
+                <p><a href="./../Advertisement/advertise.html" class="panel-3-child-2-ref">Advertising Policy</a></p>
+                <p><a href="./../Health Topic/topic.html" class="panel-3-child-2-ref">Health Topics</a></p>
+            </div>
+            
+            <div class="footer-panel-three-child-3">
+                <p><a href="" class="panel-3-child-3-ref">Site Map</a></p>
+                <p><a href="" class="panel-3-child-3-ref">Medical Affairs</a></p>
+                <p><a href="" class="panel-3-child-3-ref">Content Integrity</a></p>
+                <p><a href="" class="panel-3-child-3-ref">News Letters</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-panel-four">
+
+            <div class="footer-panel-four-child-1">
+                <div class="logo-panel-4"><img src="./../healthsewa images/health__2_-removebg-preview.png" alt="img" srcset=""></div>
+            </div>
+
+            <div class="footer-panel-four-child-2">
+                <p><a href="./../About Us/aboutUs.html" class="panel-4-childs-ref">ABOUT US</a></p>
+                <p>|</p>
+                <p><a href="./../Our Brands/brand.html" class="panel-4-childs-ref">OUR BRANDS</a></p>
+                <p>|</p>
+                <p><a href="./../kush core technologies/kush.html" class="panel-4-childs-ref">KUSH CORE TECHNOLOGIES</a></p>
+                <p>|</p>
+                <p><a href="./../Contact us/contact.html" class="panel-4-childs-ref">CONTACT US</a></p>
+                <p>|</p>
+                <p><a href="./../Terms conditions/term.html" class="panel-4-childs-ref">TERMS & CONDITIONS</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./home.js"></script>
+</body>
+</html>

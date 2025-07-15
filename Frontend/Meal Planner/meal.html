@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7-Day Meal Planner</title>
+<link rel="stylesheet" href="meal.css">
+</head>
+<body>
+
+  <h1>🥗 7-Day Meal Planner</h1>
+
+  <div class="controls">
+    <label>Goal:</label>
+    <select id="goal">
+      <option value="weightLoss">Weight Loss</option>
+      <option value="weightGain">Weight Gain</option>
+    </select>
+
+    <label>Type:</label>
+    <select id="type">
+      <option value="veg">Vegetarian</option>
+      <option value="nonVeg">Non-Vegetarian</option>
+    </select>
+
+    <button onclick="generatePlan()">Generate Plan</button>
+  </div>
+
+  <div id="mealPlan"></div>
+
+  <p class="info-msg">🔄 Refresh or generate again to get a new meal combo!</p>
+
+  <div class="back-home">
+    <a href="./../HomePage/home.html">
+      <button>⬅️ Back to Home</button>
+    </a>
+  </div>
+<script src="./meal.js"></script>
+</body>
+</html>

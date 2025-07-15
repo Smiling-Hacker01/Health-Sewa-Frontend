@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        transition: 3s;
+    }
+    #message{
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+</style>
+<body>
+    <p id="message">If you are not redirected to the Sign Up page automatically, please refresh the page...</p>
+</body>
+<script>
+    setTimeout(()=> {
+        window.location = './UserRegister/signup.html'
+    },3000)
+</script>
+</html>

@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    background: linear-gradient(to right, #6366f1, #3b82f6);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .controls {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  button {
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #059669;
+  }
+
+  .meal-day {
+    background: white;
+    margin: 1rem auto;
+    max-width: 700px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+
+  .meal-day h2 {
+    margin-top: 0;
+    color: #0f172a;
+  }
+
+  ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .info-msg {
+    text-align: center;
+    color: #475569;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+
+  .back-home {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .back-home a button {
+    background-color: #ef4444;
+  }
+
+  @media (max-width: 600px) {
+    .meal-day {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    select, button {
+      width: 90%;
+      margin: 0.5rem auto;
+    }
+  }

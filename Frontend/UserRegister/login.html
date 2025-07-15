@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sewa - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <!-- <video autoplay loop muted id="v-background">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser doesn't support the video tag.
+    </video> -->
+
+    <div class="container">
+        <h1 id="login-heading">Welcome home — login to pick up where you left off</h1>
+        <form class="form">
+            <input type="email" class="user-input" placeholder="Enter your email" name="email" id="email" required>
+            <input type="password" class="user-input" placeholder="Enter your password" name="password" id="password" required>
+
+            <div class="checkbox-label">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me" id="label-remember-me">Remember me</label>
+            </div>
+
+            <button type="submit" class="buttons login-btn">Login</button>
+            <button type="reset" class="buttons reset-btn">Reset</button>
+            <a href="./signup.html" class="sign-up-link">Don't have an account? <span class="user-signUp">Register here</span></a>
+        </form>
+    </div>
+  <script src="./login.js"></script>
+</body>
+</html>

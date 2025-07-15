@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recepient</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial,sans-serif;
+    }
+    body{
+        background-color: #424242;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        justify-content: center;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 500px;
+    }
+    .heading{
+        padding: 20px;
+        font-size: 30px;
+    }
+    p{
+        font-size: 24px;
+    }
+    .back-home{
+        color: #fff;
+        font-weight: bold;
+        margin-left: 25%;
+        margin-right: 10px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #e86a4b;
+        border-radius: 5px;
+        border: none;
+    }
+    .back-home:hover{
+        transition: 3s;
+        transform: translate(-30%);
+        background-color: #dd2915;
+    }
+    .go-back{
+        /* margin-left: 50%; */
+        font-weight: bold;
+        margin-right: 25%;
+        color: #fff;
+        padding: 10px;
+        background-color: #e86a4b;
+        border-radius: 5px;
+        border: none;
+    }
+    .go-back:hover{
+        transition: 3s;
+        transform: translate(30%);
+        background-color: #dd2915;
+    }
+    /* #knowMore{
+        font-size: 20px;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-left: 42%;
+        color: rgb(34, 141, 223);
+    }
+    #knowMore:hover{
+        text-decoration: underline;
+        color: blue;
+    } */
+</style>
+<body>
+    <div class="container">
+        <h2 class="heading">Recipient Registration Successful!</h2>
+        <br>
+        <p>Your request for the required blood has been successfully submitted. Our team will contact you soon regarding further details. Additionally, your request has been forwarded to a suitable donor with the same blood group. We appreciate your patience and hope to assist you as quickly as possible.</p>
+        <br><br>
+        <button class="back-home"><<< Home</button>
+        <button class="go-back">Go Back >>></button>
+        <!-- <p class="aboutUs"><a href="" id="knowMore">About Us</a></p> -->
+    </div>
+</body>
+<script>
+    const home = document.querySelector('.back-home');
+    const backPage = document.querySelector('.go-back');
+    home.addEventListener('click', (event) => {
+        window.location.href = './../HomePage/home.html';
+    });
+    backPage.addEventListener('click', (event) => {
+        window.location.href='./service.html';
+    });
+</script>
+</html>

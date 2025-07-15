@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Brands - KushCore Technologies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 2rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .brands-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .brand-card {
+      background-color: #e2e8f0;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .brand-card:hover{
+      transition: 2s;
+      transform: rotate(20deg);
+    }
+
+    .brand-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #1e293b;
+    }
+
+    button {
+      margin: 2rem 0;
+      padding: 12px 24px;
+      background-color: #0ea5e9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0284c7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Brands</h1>
+    <p>Explore the amazing brands under KushCore Technologies</p>
+  </header>
+
+  <main>
+    <div class="brands-container">
+      <div class="brand-card"><h3>Blue Crown</h3></div>
+      <div class="brand-card"><h3>CraftVault</h3></div>
+      <div class="brand-card"><h3>SecureSphere</h3></div>
+      <div class="brand-card"><h3>Raghvi AI</h3></div>
+      <div class="brand-card"><h3>PixelNest</h3></div>
+      <div class="brand-card"><h3>TaskTribe</h3></div>
+    </div>
+  </main>
+
+  <footer>
+    <button onclick="window.location.href='./../HomePage/home.html'">Back to Home</button>
+  </footer>
+
+</body>
+</html>

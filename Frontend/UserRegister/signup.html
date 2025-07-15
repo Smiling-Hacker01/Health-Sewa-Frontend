@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Sewa - Signup</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+    <!-- <video autoplay loop muted id="v-background">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser doesn't support the video tag.
+    </video> -->
+
+    <div class="container">
+        <h1>Create Your Account</h1>
+        <form class="form">
+            <input type="text" class="user-input" placeholder="Full Name" name="fullName" required>
+            <input type="email" class="user-input" placeholder="Email Address" name="email" required>
+
+            <div class="password-container">
+                <input type="password" class="user-input" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="password-container">
+                <input type="password" class="user-input" id="confirm-password" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="checkbox-label">
+                <input type="checkbox" required> I agree to the  <a href="./../Terms conditions/term.html" id="terms">Terms & Conditions</a>
+            </div>
+
+            <button type="submit" class="buttons signup-btn">Sign Up</button>
+
+            <a href="login.html" class="login-link">Already have an account? Login</a>
+        </form>
+    </div>
+</body>
+<script src="./signUp.js"></script>
+</html>

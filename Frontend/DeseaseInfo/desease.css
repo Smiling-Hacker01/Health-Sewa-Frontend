@@ -1,0 +1,138 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Heading */
+  .heading {
+    text-align: center;
+    color: #00796b;
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 121, 107, 0.15);
+  }
+  
+  /* Search Box */
+  #search-box {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.9rem 1.5rem;
+    width: 90%;
+    max-width: 500px;
+    font-size: 1rem;
+    border: 2px solid #b2dfdb;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 150, 136, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  #search-box:focus {
+    outline: none;
+    border-color: #009688;
+    box-shadow: 0 6px 18px rgba(0, 150, 136, 0.3);
+  }
+  
+  /* Disease Container */
+  .disease-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem;
+    padding: 2rem;
+    flex-grow: 1;
+  }
+  
+  /* Disease Card */
+  .disease {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .disease:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 150, 136, 0.2);
+  }
+  
+  .disease h2 {
+    color: #00796b;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .disease p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .disease strong {
+    color: #004d40;
+  }
+  
+  /* Common Disease Block */
+  .common-desease {
+    display: none;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  /* No results found placeholder */
+  #no-result {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 2rem;
+    display: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    #search-box {
+      padding: 0.8rem 1.2rem;
+    }
+  
+    .disease {
+      padding: 1.3rem;
+    }
+  
+    .disease h2 {
+      font-size: 1.3rem;
+    }
+  
+    .disease p {
+      font-size: 0.95rem;
+    }
+  }
+  

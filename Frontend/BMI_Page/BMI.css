@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    background-color: antiquewhite;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    border: 2px ridge black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 80%; /* Adjust width dynamically based on screen size */
+    max-width: 600px; /* Maximum width for large screens */
+}
+#containe h1{
+    padding-bottom: 5px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 80%; /* Width relative to the container */
+    max-width: 200px; /* Limiting maximum input width */
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Add hover effect */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#weight-guide {
+    margin-top: 30px;
+}
+
+#weight-guide h2 {
+    font-size: 1.2em;
+}
+
+#weight-guide p {
+    font-size: 1em;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+}
