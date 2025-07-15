@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  const res = await fetch("http://localhost:4000/user/verify", {
+  const res = await fetch("https://health-sewa-backend.onrender.com/user/verify", {
     method: "GET",
     headers: {
       "Authorization": `Bearer ${token}` 
