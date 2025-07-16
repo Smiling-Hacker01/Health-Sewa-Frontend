@@ -9,9 +9,9 @@ A complete digital healthcare ecosystem, **Health Sewa** empowers users to take 
 
 ## 🔗 Live Demo
 
-🌐 [Visit Health Sewa on Netlify](https://your-netlify-url.netlify.app)
+🌐 [Visit Health Sewa on Netlify](https://healthsewa1.netlify.app/)
 
-🧠 Backend: [View Backend Repo](https://github.com/Smiling-Hacker01/Health-Sewa-Backend)
+🧠 Backend: [View Backend Repo](https://github.com/Smiling-Hacker01/Health-Sewa-Backend.git)
 
 ---
 
@@ -104,7 +104,7 @@ Each of these folders contains their respective `HTML`, `CSS`, and `JS` files.
 Made with 💙 by **Vishal Singh Kushwaha**
 
 - GitHub: [Smiling-Hacker01](https://github.com/Smiling-Hacker01)
-- LinkedIn: [Your Profile](https://linkedin.com/in/your-profile)
+- LinkedIn: [Your Profile](www.linkedin.com/in/sdevsk)
 
 ---
 
