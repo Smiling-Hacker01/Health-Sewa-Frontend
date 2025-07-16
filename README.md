@@ -104,7 +104,7 @@ Each of these folders contains their respective `HTML`, `CSS`, and `JS` files.
 Made with 💙 by **Vishal Singh Kushwaha**
 
 - GitHub: [Smiling-Hacker01](https://github.com/Smiling-Hacker01)
-- LinkedIn: [Your Profile](www.linkedin.com/in/sdevsk)
+- LinkedIn: [Your Profile](https://www.linkedin.com/in/sdevsk/)
 
 ---
 
