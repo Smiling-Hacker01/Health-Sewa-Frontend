@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -10,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #74ebd5, #acb6e5); /* Soft health-themed gradient */
+    background: var(--bg-color); 
 }
 
 .container {
@@ -70,12 +69,12 @@ h1 {
 }
 
 .signup-btn {
-    background-color: #42b883;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .signup-btn:hover {
-    background-color: #3aa375;
+    background-color: var(--primary-light);
 }
 
 .checkbox-label {
