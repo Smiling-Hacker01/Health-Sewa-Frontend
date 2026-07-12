@@ -1,199 +1,311 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f8fb;
+    min-height: 100vh;
+}
+
+/* ── Page Hero Header ─────────────────────────────────────── */
+.page-hero {
+    background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #ff6b6b 100%);
+    padding: 48px 20px 40px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Back to Homepage button */
-.back-home-btn {
-    display: inline-block;
+.page-hero::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    top: -80px;
+    right: -60px;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    bottom: -60px;
+    left: -40px;
+}
+
+.page-hero .brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 16px;
-    padding: 10px 20px;
-    background: transparent;
-    border: 2px solid #ff4d4d;
-    color: #ff4d4d;
-    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero .brand-bar span {
+    color: rgba(255,255,255,0.85);
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.page-hero h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Main Container ───────────────────────────────────────── */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 24px 60px;
+}
+
+/* Back button */
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 28px;
+    padding: 9px 18px;
+    background: transparent;
+    border: 1.5px solid #e74c3c;
+    color: #e74c3c;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .back-home-btn:hover {
-    background: #ff4d4d;
+    background: #e74c3c;
     color: white;
 }
 
-h1 {
-    color: #222;
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
+/* ── Type Toggle (Gym / Home) ─────────────────────────────── */
 .workout-type {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 20px;
 }
 
 .workout-type button {
-    padding: 15px 40px;
-    font-size: 18px;
-    border: none;
-    background-color: #ff4d4d;
-    color: white;
+    padding: 13px 36px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    background: #fff;
+    color: #888;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.workout-type button:hover, .workout-type button.active-type {
-    background-color: #cc0000;
+.workout-type button:hover {
+    border-color: #e74c3c;
+    color: #e74c3c;
 }
 
+.workout-type button.active-type {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(231, 76, 60, 0.3);
+}
+
+/* ── Week Selector ────────────────────────────────────────── */
 .week-selector {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 .week-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #ff4d4d;
-    background-color: white;
-    color: #ff4d4d;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1.5px solid #e0e0e0;
+    background: #fff;
+    color: #777;
     cursor: pointer;
     border-radius: 8px;
-    transition: 0.3s ease;
-    font-weight: bold;
+    transition: 0.25s ease;
 }
 
-.week-btn:hover, .week-btn.active {
-    background-color: #ff4d4d;
+.week-btn:hover {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.week-btn.active {
+    background: #e74c3c;
     color: white;
+    border-color: #e74c3c;
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.25);
 }
 
-.workout-plan {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 30px;
-    background: white;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    display: none;
-    transition: 0.4s ease-in-out;
-}
-
+/* ── Day Card ─────────────────────────────────────────────── */
 .workout-day-modern {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     background: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    animation: fadeUp 0.3s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1.5px solid #fde8e6;
+}
+
+.day-header .day-badge {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
 }
 
 .day-header h2 {
-    color: #ff4d4d;
-    font-size: 26px;
+    color: #1a1a1a;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 25px;
-    text-align: center;
-    border-bottom: 2px dashed #ffe6e6;
-    padding-bottom: 15px;
+    margin: 0;
 }
 
+/* Rest day card */
 .rest-card {
     text-align: center;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    color: #555;
+    padding: 36px 20px;
+    background: linear-gradient(135deg, #fff9f9, #fff);
+    border-radius: 12px;
+    border: 1.5px dashed #fde0de;
+    color: #888;
+    font-size: 16px;
 }
 
+.rest-card .rest-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+/* ── Exercise Cards ───────────────────────────────────────── */
 .exercise-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
 }
 
 .exercise-card {
     background: #fafafa;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #f0f0f0;
+    border-left: 4px solid #e74c3c;
+    border-radius: 12px;
+    padding: 20px 22px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .exercise-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-    border-color: #ffd6d6;
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.08);
+    border-color: #e74c3c;
+    background: #fff;
 }
 
 .exercise-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    gap: 12px;
 }
 
 .exercise-card-header h3 {
-    font-size: 22px;
-    color: #333;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
     margin: 0;
 }
 
 .rep-badge {
-    background: #ff4d4d;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
     color: white;
-    padding: 6px 12px;
+    padding: 5px 13px;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .exercise-steps {
     color: #555;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 .exercise-steps ol {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .exercise-steps li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-/* Responsive adjustments */
+/* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        margin: 10px;
+    .page-hero h1 {
+        font-size: 26px;
     }
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 14px;
+    .page-hero p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 24px 16px 48px;
     }
 
     .workout-type {
@@ -203,8 +315,8 @@ h1 {
 
     .workout-type button {
         width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
+        padding: 12px;
+        font-size: 15px;
     }
 
     .week-selector {
@@ -215,19 +327,25 @@ h1 {
     .week-btn {
         width: calc(50% - 4px);
         padding: 10px;
-        font-size: 14px;
+        font-size: 13px;
+        text-align: center;
     }
 
     .workout-day-modern {
-        padding: 15px;
+        padding: 20px 18px;
+    }
+
+    .day-header {
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .day-header h2 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .exercise-card {
-        padding: 15px;
+        padding: 16px;
     }
 
     .exercise-card-header {
@@ -237,16 +355,11 @@ h1 {
     }
 
     .exercise-card-header h3 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .rep-badge {
-        font-size: 13px;
-        padding: 5px 10px;
-    }
-
-    .exercise-steps {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .back-home-btn {

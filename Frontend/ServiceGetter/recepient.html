@@ -3,103 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>recepient</title>
+    <title>Request Submitted | Health Sewa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 60%, #ffeaea 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(192, 57, 43, 0.12), 0 4px 16px rgba(0,0,0,0.06);
+            max-width: 580px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Top coloured banner */
+        .card-banner {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #ff6b6b 100%);
+            padding: 40px 40px 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .card-banner h1 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .card-banner p {
+            color: rgba(255,255,255,0.88);
+            font-size: 15px;
+        }
+
+        /* Body */
+        .card-body {
+            padding: 40px 40px 36px;
+        }
+
+        .info-section {
+            background: #fff9f9;
+            border: 1.5px solid #fde0de;
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+        }
+
+        .info-section h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #c0392b;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 10px 0;
+            border-bottom: 1px solid #fde8e6;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .info-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-text strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+
+        .info-text span {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin-bottom: 32px;
+        }
+
+        .timeline h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 18px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 34px;
+            width: 2px;
+            height: calc(100% + 4px);
+            background: #fde0de;
+        }
+
+        .step-dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-info strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+            margin-top: 5px;
+        }
+
+        .step-info span {
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            flex: 1;
+            padding: 14px;
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.35);
+        }
+
+        .btn-secondary {
+            flex: 1;
+            padding: 14px;
+            background: transparent;
+            color: #e74c3c;
+            border: 1.5px solid #e74c3c;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #e74c3c;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .card-banner {
+                padding: 32px 24px 40px;
+            }
+            .card-body {
+                padding: 30px 24px 28px;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial,sans-serif;
-    }
-    body{
-        background-color: #424242;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100%;
-    }
-    .container{
-        justify-content: center;
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 90%;
-        max-width: 500px;
-    }
-    .heading{
-        padding: 20px;
-        font-size: 30px;
-    }
-    p{
-        font-size: 24px;
-    }
-    .back-home{
-        color: #fff;
-        font-weight: bold;
-        margin-left: 25%;
-        margin-right: 10px;
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: #e86a4b;
-        border-radius: 5px;
-        border: none;
-    }
-    .back-home:hover{
-        transition: 3s;
-        transform: translate(-30%);
-        background-color: #dd2915;
-    }
-    .go-back{
-        /* margin-left: 50%; */
-        font-weight: bold;
-        margin-right: 25%;
-        color: #fff;
-        padding: 10px;
-        background-color: #e86a4b;
-        border-radius: 5px;
-        border: none;
-    }
-    .go-back:hover{
-        transition: 3s;
-        transform: translate(30%);
-        background-color: #dd2915;
-    }
-    /* #knowMore{
-        font-size: 20px;
-        text-decoration: none;
-        padding-top: 20px;
-        padding-left: 42%;
-        color: rgb(34, 141, 223);
-    }
-    #knowMore:hover{
-        text-decoration: underline;
-        color: blue;
-    } */
-</style>
 <body>
-    <div class="container">
-        <h2 class="heading">Recipient Registration Successful!</h2>
-        <br>
-        <p>Your request for the required blood has been successfully submitted. Our team will contact you soon regarding further details. Additionally, your request has been forwarded to a suitable donor with the same blood group. We appreciate your patience and hope to assist you as quickly as possible.</p>
-        <br><br>
-        <button class="back-home"><<< Home</button>
-        <button class="go-back">Go Back >>></button>
-        <!-- <p class="aboutUs"><a href="" id="knowMore">About Us</a></p> -->
+    <div class="card">
+
+        <!-- Banner -->
+        <div class="card-banner">
+            <div class="success-icon">✅</div>
+            <h1>Request Submitted!</h1>
+            <p>Your blood request has been registered successfully</p>
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+
+            <!-- What happens next info boxes -->
+            <div class="info-section">
+                <h3>What We Did</h3>
+                <div class="info-row">
+                    <span class="info-icon">🩸</span>
+                    <div class="info-text">
+                        <strong>Donors Notified</strong>
+                        <span>We have instantly sent your blood request to matching donors in your area via email.</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-icon">📧</span>
+                    <div class="info-text">
+                        <strong>Confirmation Email Sent</strong>
+                        <span>A confirmation email has been sent to your registered email address with all the details.</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <span class="info-icon">🕐</span>
+                    <div class="info-text">
+                        <strong>30-Day Processing Window</strong>
+                        <span>We will process your request within <strong>30 days</strong>. If no donor is found, you will be notified with further steps.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <h3>What Happens Next</h3>
+
+                <div class="timeline-item">
+                    <div class="step-dot">1</div>
+                    <div class="step-info">
+                        <strong>Donor Reviews Request</strong>
+                        <span>A matching donor receives your request by email and chooses to accept.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="step-dot">2</div>
+                    <div class="step-info">
+                        <strong>You Get Notified</strong>
+                        <span>Once a donor accepts, you'll receive their contact details via email to coordinate.</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="step-dot">3</div>
+                    <div class="step-info">
+                        <strong>Confirm Receipt</strong>
+                        <span>After receiving blood, confirm via the email link so we can mark your request fulfilled.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <a href="./../HomePage/home.html" class="btn-primary">🏠 Go to Home</a>
+                <a href="./service.html" class="btn-secondary">← Register Another</a>
+            </div>
+
+        </div>
     </div>
 </body>
-<script>
-    const home = document.querySelector('.back-home');
-    const backPage = document.querySelector('.go-back');
-    home.addEventListener('click', (event) => {
-        window.location.href = './../HomePage/home.html';
-    });
-    backPage.addEventListener('click', (event) => {
-        window.location.href='./service.html';
-    });
-</script>
 </html>
