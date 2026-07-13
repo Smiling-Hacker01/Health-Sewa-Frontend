@@ -3,19 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nearest Blood Banks</title>
- <link rel="stylesheet" href="bloodBank.css">
+    <title>Nearby Blood Banks | Health Sewa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bloodBank.css">
 </head>
-<body>
+<body class="blood-bank-page">
+    <main class="page-shell">
+        <section class="hero-panel">
+            <a class="brand-mark" href="./../HomePage/home.html" aria-label="Health Sewa home">
+                <span class="brand-symbol">HS</span>
+                <span class="brand-copy">
+                    <strong>Health Sewa</strong>
+                    <small>Local hospital finder</small>
+                </span>
+            </a>
 
-    <div class="container">
-        <h1>The Nearest Blood Banks Hospital From Your Location</h1>
-        <p class="message">Fetching Details Please Wait...</p>
-        <div class="hospital-list" id="hospitalList"></div>
-    </div>
-    <div class="center-button">
-        <button class="home" id="button">Home</button>
-    </div>
-<script src="./bloodBank.js"></script>
+            <div class="hero-copy">
+                <span class="eyebrow">Live lookup</span>
+                <h1>Find nearby blood banks with a premium, fast-loading layout.</h1>
+                <p>
+                    We use your current location to show hospitals and blood banks around you, then surface the details in a cleaner, easier-to-scan list.
+                </p>
+            </div>
+
+            <div class="hero-metrics">
+                <article>
+                    <strong>Location based</strong>
+                    <span>Uses browser geolocation</span>
+                </article>
+                <article>
+                    <strong>Nearby results</strong>
+                    <span>Searches hospitals close to you</span>
+                </article>
+                <article>
+                    <strong>Quick return</strong>
+                    <span>Home button stays ready</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="results-panel">
+            <div class="results-shell">
+                <div class="results-header">
+                    <div>
+                        <span class="section-tag">Search status</span>
+                        <h2>The nearest blood banks from your location</h2>
+                    </div>
+                    <a href="./../HomePage/home.html" class="home-link" id="button">Home</a>
+                </div>
+
+                <p class="message">Fetching details. Please allow location access to continue.</p>
+                <div class="hospital-list" id="hospitalList"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./bloodBank.js"></script>
 </body>
 </html>

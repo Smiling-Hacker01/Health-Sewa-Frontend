@@ -15,242 +15,210 @@
             font-family: 'Inter', sans-serif;
         }
 
+        :root {
+            --accent: #e74c3c;
+            --accent-deep: #c0392b;
+            --text: #1b1b1b;
+            --muted: #666;
+            --border: rgba(192, 57, 43, 0.14);
+        }
+
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #fff5f5 0%, #fff 60%, #ffeaea 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 20px;
+            background:
+                radial-gradient(circle at top left, rgba(231, 76, 60, 0.16), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(192, 57, 43, 0.14), transparent 32%),
+                linear-gradient(135deg, #fffaf9 0%, #fff 45%, #fff3f1 100%);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            color: var(--text);
         }
 
         .card {
-            background: #fff;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(192, 57, 43, 0.12), 0 4px 16px rgba(0,0,0,0.06);
-            max-width: 580px;
-            width: 100%;
+            width: min(760px, 100%);
+            border-radius: 28px;
             overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 24px 70px rgba(192, 57, 43, 0.14);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
         }
 
-        /* Top coloured banner */
         .card-banner {
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #ff6b6b 100%);
-            padding: 40px 40px 50px;
-            text-align: center;
-            position: relative;
-        }
-
-        .card-banner::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .success-icon {
-            width: 72px;
-            height: 72px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 36px;
-            backdrop-filter: blur(4px);
-            border: 2px solid rgba(255,255,255,0.4);
-        }
-
-        .card-banner h1 {
+            padding: 34px 34px 38px;
+            background: linear-gradient(140deg, rgba(192, 57, 43, 0.98), rgba(231, 76, 60, 0.92) 58%, rgba(255, 107, 107, 0.9));
             color: #fff;
-            font-size: 26px;
-            font-weight: 800;
-            margin-bottom: 8px;
         }
 
-        .card-banner p {
-            color: rgba(255,255,255,0.88);
-            font-size: 15px;
-        }
-
-        /* Body */
-        .card-body {
-            padding: 40px 40px 36px;
-        }
-
-        .info-section {
-            background: #fff9f9;
-            border: 1.5px solid #fde0de;
-            border-radius: 14px;
-            padding: 22px 24px;
-            margin-bottom: 28px;
-        }
-
-        .info-section h3 {
-            font-size: 14px;
-            font-weight: 700;
-            color: #c0392b;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 16px;
-        }
-
-        .info-row {
+        .brand-line {
             display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 10px 0;
-            border-bottom: 1px solid #fde8e6;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
         }
 
-        .info-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        .brand-mark {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .info-icon {
-            font-size: 20px;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .info-text strong {
+        .brand-copy strong {
             display: block;
-            font-size: 14px;
-            font-weight: 700;
-            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 800;
             margin-bottom: 2px;
         }
 
-        .info-text span {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
+        .brand-copy span {
+            font-size: 12px;
+            opacity: 0.82;
         }
 
-        /* Timeline */
+        .card-banner h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.06;
+            letter-spacing: -0.05em;
+            margin-bottom: 10px;
+        }
+
+        .card-banner p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 56ch;
+        }
+
+        .card-body {
+            padding: 32px 34px 34px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .info-box {
+            border-radius: 18px;
+            border: 1px solid rgba(231, 76, 60, 0.12);
+            background: #fff;
+            padding: 18px;
+        }
+
+        .info-box h3 {
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-deep);
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+        }
+
         .timeline {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .timeline h3 {
             font-size: 14px;
-            font-weight: 700;
-            color: #333;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 18px;
+            letter-spacing: 0.08em;
+            color: #2b2b2b;
+            margin-bottom: 16px;
         }
 
         .timeline-item {
             display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-            position: relative;
-        }
-
-        .timeline-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 34px;
-            width: 2px;
-            height: calc(100% + 4px);
-            background: #fde0de;
+            gap: 14px;
+            margin-bottom: 14px;
         }
 
         .step-dot {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #c0392b, #e74c3c);
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+            background: linear-gradient(135deg, var(--accent-deep), var(--accent));
         }
 
         .step-info strong {
             display: block;
             font-size: 14px;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 2px;
-            margin-top: 5px;
+            margin-bottom: 4px;
+            margin-top: 4px;
         }
 
         .step-info span {
             font-size: 13px;
-            color: #777;
+            line-height: 1.6;
+            color: var(--muted);
         }
 
-        /* Buttons */
         .btn-group {
             display: flex;
             gap: 12px;
         }
 
-        .btn-primary {
+        .btn-primary,
+        .btn-secondary {
             flex: 1;
-            padding: 14px;
-            background: linear-gradient(135deg, #c0392b, #e74c3c);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
+            padding: 14px 16px;
+            border-radius: 14px;
             text-decoration: none;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.35);
+        .btn-primary {
+            color: #fff;
+            background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+            box-shadow: 0 16px 34px rgba(231, 76, 60, 0.24);
         }
 
         .btn-secondary {
-            flex: 1;
-            padding: 14px;
-            background: transparent;
-            color: #e74c3c;
-            border: 1.5px solid #e74c3c;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: background 0.2s, color 0.2s;
+            color: var(--accent-deep);
+            background: #fff;
+            border: 1.5px solid rgba(231, 76, 60, 0.18);
         }
 
+        .btn-primary:hover,
         .btn-secondary:hover {
-            background: #e74c3c;
-            color: white;
+            transform: translateY(-1px);
         }
 
-        @media (max-width: 480px) {
-            .card-banner {
-                padding: 32px 24px 40px;
-            }
+        @media (max-width: 680px) {
+            .card-banner,
             .card-body {
-                padding: 30px 24px 28px;
+                padding-left: 22px;
+                padding-right: 22px;
             }
+
+            .info-grid,
             .btn-group {
+                grid-template-columns: 1fr;
                 flex-direction: column;
             }
         }
@@ -258,78 +226,62 @@
 </head>
 <body>
     <div class="card">
-
-        <!-- Banner -->
         <div class="card-banner">
-            <div class="success-icon">✅</div>
-            <h1>Request Submitted!</h1>
-            <p>Your blood request has been registered successfully</p>
+            <div class="brand-line">
+                <div class="brand-mark">HS</div>
+                <div class="brand-copy">
+                    <strong>Health Sewa</strong>
+                    <span>Recipient request confirmed</span>
+                </div>
+            </div>
+            <h1>Request submitted successfully.</h1>
+            <p>Your blood request is now in the matching flow. Nearby donors will be notified and you will receive updates by email.</p>
         </div>
 
-        <!-- Body -->
         <div class="card-body">
-
-            <!-- What happens next info boxes -->
-            <div class="info-section">
-                <h3>What We Did</h3>
-                <div class="info-row">
-                    <span class="info-icon">🩸</span>
-                    <div class="info-text">
-                        <strong>Donors Notified</strong>
-                        <span>We have instantly sent your blood request to matching donors in your area via email.</span>
-                    </div>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>What we did</h3>
+                    <p>We saved your request, matched compatible donors, and sent your confirmation email with the next steps.</p>
                 </div>
-                <div class="info-row">
-                    <span class="info-icon">📧</span>
-                    <div class="info-text">
-                        <strong>Confirmation Email Sent</strong>
-                        <span>A confirmation email has been sent to your registered email address with all the details.</span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <span class="info-icon">🕐</span>
-                    <div class="info-text">
-                        <strong>30-Day Processing Window</strong>
-                        <span>We will process your request within <strong>30 days</strong>. If no donor is found, you will be notified with further steps.</span>
-                    </div>
+                <div class="info-box">
+                    <h3>What happens next</h3>
+                    <p>When a donor accepts, you will get their contact details so you can coordinate the donation quickly.</p>
                 </div>
             </div>
 
-            <!-- Timeline -->
             <div class="timeline">
-                <h3>What Happens Next</h3>
+                <h3>Process overview</h3>
 
                 <div class="timeline-item">
                     <div class="step-dot">1</div>
                     <div class="step-info">
-                        <strong>Donor Reviews Request</strong>
-                        <span>A matching donor receives your request by email and chooses to accept.</span>
+                        <strong>Matching starts</strong>
+                        <span>The system notifies compatible donors in your area.</span>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="step-dot">2</div>
                     <div class="step-info">
-                        <strong>You Get Notified</strong>
-                        <span>Once a donor accepts, you'll receive their contact details via email to coordinate.</span>
+                        <strong>Donor response</strong>
+                        <span>Once a donor accepts, your request will move forward and you will receive their contact details.</span>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="step-dot">3</div>
                     <div class="step-info">
-                        <strong>Confirm Receipt</strong>
-                        <span>After receiving blood, confirm via the email link so we can mark your request fulfilled.</span>
+                        <strong>Confirmation</strong>
+                        <span>After receiving blood, confirm it through the email link so the request can be marked complete.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="btn-group">
-                <a href="./../HomePage/home.html" class="btn-primary">🏠 Go to Home</a>
-                <a href="./service.html" class="btn-secondary">← Register Another</a>
+                <a href="./../HomePage/home.html" class="btn-primary">Go to Home</a>
+                <a href="./service.html" class="btn-secondary">Register Another</a>
             </div>
-
         </div>
     </div>
 </body>
