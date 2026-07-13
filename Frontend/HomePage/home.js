@@ -82,11 +82,13 @@ function prevSlide() {
 setInterval(nextSlide, 5000);
 
 const hamburger = document.getElementById("ham-icon");
-const navLinks = document.getElementById("nav-links");
+const navbar = document.getElementById("navbar");
 
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (hamburger && navbar) {
+    hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+    });
+}
 
 // function to logout will take care of this in future
 
