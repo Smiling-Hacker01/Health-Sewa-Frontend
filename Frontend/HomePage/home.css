@@ -658,23 +658,27 @@ button.next:hover {
 }
 
 
+
 /* ====== FOOTER ====== */
 .footer {
     margin-top: 48px;
-    background: linear-gradient(180deg, #0f0f15 0%, #080810 100%);
+    background: #0f0f15;
     color: #fff;
     width: 100%;
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
 }
 
-/* Back to top bar */
 .footer-pannel-one {
     text-align: center;
     padding: 15px;
-    background: rgba(231, 76, 60, 0.07);
+    background: #1a1a22;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .footer-pannel-one a {
-    color: #999;
+    color: #888;
     text-decoration: none;
     font-size: 11px;
     font-weight: 800;
@@ -687,15 +691,14 @@ button.next:hover {
     color: #fff;
 }
 
-/* Shared inner container â€” keeps content centred, background fills full width */
 .footer-panel-two,
 .footer-panel-three,
 .footer-panel-four {
     width: min(1240px, calc(100% - 64px));
     margin: 0 auto;
+    background: transparent;
 }
 
-/* Brand / socials / logo row */
 .footer-panel-two {
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -713,12 +716,11 @@ button.next:hover {
 }
 
 .footer-panel-two-child-1 p {
-    color: #6a6a7a;
+    color: #8a8a9a;
     margin-top: 6px;
     font-size: 14px;
 }
 
-/* Social icons */
 .footer-panel-two-child-2 {
     display: flex;
     gap: 10px;
@@ -731,7 +733,7 @@ button.next:hover {
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     color: #b0b0c0;
     font-size: 17px;
     text-decoration: none;
@@ -747,7 +749,6 @@ button.next:hover {
     box-shadow: 0 10px 22px rgba(231, 76, 60, 0.3);
 }
 
-/* Logo */
 .footer-panel-two-child-3 .site-logo img {
     height: 50px;
     width: auto;
@@ -755,7 +756,6 @@ button.next:hover {
     opacity: 0.78;
 }
 
-/* 3-column links grid */
 .footer-panel-three {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -764,7 +764,6 @@ button.next:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Column headings */
 .footer-panel-three-child-1 h2,
 .footer-panel-three-child-2 h3,
 .footer-panel-three-child-3 h3 {
@@ -776,14 +775,12 @@ button.next:hover {
     margin-bottom: 18px;
 }
 
-/* Description text */
 .footer-panel-three-child-1 p {
     color: #7a7a8a;
     font-size: 14px;
     line-height: 1.85;
 }
 
-/* Nav links */
 .panel-3-child-2-ref,
 .panel-3-child-3-ref {
     color: #7a7a8a;
@@ -806,7 +803,6 @@ button.next:hover {
     gap: 8px;
 }
 
-/* Bottom legal bar */
 .footer-panel-four {
     display: flex;
     align-items: center;
